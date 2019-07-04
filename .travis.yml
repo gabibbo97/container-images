@@ -7,6 +7,7 @@ if: branch = master
 
 env:
   - CONTEXT_DIR=s3cmd DOCKERFILE=Dockerfile IMAGE_NAME=s3cmd
+  - CONTEXT_DIR=tika DOCKERFILE=Dockerfile IMAGE_NAME=tika
 
 before_script:
   - docker login docker.pkg.github.com -u ${DOCKER_USERNAME} -p ${DOCKER_TOKEN}
