@@ -13,7 +13,6 @@ RUN apt-get update && apt-get install -y \
   asterisk-moh-opsound-wav \
   asterisk-mp3 \
   asterisk-opus \
-  asterisk-voicemail \
   asterisk-voicemail-imapstorage \
   asterisk-voicemail-odbcstorage \
   odbc-postgresql \
