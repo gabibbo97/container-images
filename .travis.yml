@@ -12,5 +12,7 @@ before_script:
   - docker login docker.pkg.github.com -u ${DOCKER_USERNAME} -p ${DOCKER_TOKEN}
 script:
   - docker build -f ${CONTEXT_DIR}/${DOCKERFILE} -t docker.pkg.github.com/gabibbo97/container-images/${IMAGE_NAME}:${TRAVIS_COMMIT} ${CONTEXT_DIR}
+  - docker tag docker.pkg.github.com/gabibbo97/container-images/${IMAGE_NAME}:${TRAVIS_COMMIT} docker.pkg.github.com/gabibbo97/container-images/${IMAGE_NAME}:latest
 after_script:
   - docker push docker.pkg.github.com/gabibbo97/container-images/${IMAGE_NAME}:${TRAVIS_COMMIT}
+  - docker push docker.pkg.github.com/gabibbo97/container-images/${IMAGE_NAME}:latest
